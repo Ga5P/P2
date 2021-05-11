@@ -13,7 +13,6 @@ webbrowser.get()
 result = webbrowser._tryorder
 os = result[0][:3]
 
-
 # Then, indicate appropriates drivers:
 if os == 'win':
     from webdriver_manager.microsoft import EdgeChromiumDriverManager
@@ -145,7 +144,7 @@ for categories in read_url(site).findAll('ul',{'class': 'nav nav-list'}):
 #----------------------------------------#
 #   STEP FOUR : DOWNLOAD BOOK'S IMAGE :  #
 #----------------------------------------#
-
+    
                 pic = requests.get(image_url)
                 
                 if os =='win':
@@ -154,6 +153,10 @@ for categories in read_url(site).findAll('ul',{'class': 'nav nav-list'}):
                 else:
                     # Just one here:
                     pic_title = title.replace('/', ' ')
+                    
+                if title in book_infos.keys():
+                    pic_title = pic_title + " -bis"
+                    # These lines allow to rename a title present twice wich give us an incomplete result
 
                 #   Making a new png file for each image:
                 open(f'./{pic_title}.png', 'wb').write(pic.content)
@@ -168,12 +171,16 @@ for categories in read_url(site).findAll('ul',{'class': 'nav nav-list'}):
                 # We stock the result in a dictionnary to keep the association {wanted_info : info}
                 # from our two lists
                 
+                if title in book_infos.keys():
+                    title = title + " -bis"
+                # These lines allow to rename a title present twice wich give us an incomplete result
+                
                 book_infos[title] = book_info   # We can save all informations of this specific book
                                                 # in a new dictionnary
                                                 
                 dic_categories[book_info.get('category')] = book_infos
                 # We can now fill the dictionnary with theses categories as keys
-    
+
 dic_frames = {}
 for category, values in dic_categories.items():
     
