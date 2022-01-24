@@ -12,22 +12,22 @@ cd /Users/"vous"/Downloads/P2
 
 Pour vérifier que vous êtes au bon endroit dans la console entrez:
 - Unix: `pwd`
-- Windows: cd
+- Windows: `cd`
 
 Créez un environnement :
-- Unix: python -m venv P2.env
-- Windows: py -m venv P2.env
+- Unix: `python -m venv P2.env`
+- Windows: `py -m venv P2.env`
 
 Activez l'environnement :
-- Unix: source P2.env/bin/activate
-- Windows: P2.env\Scripts\activate
+- Unix: `source P2.env/bin/activate`
+- Windows: `P2.env\Scripts\activate`
 
 
 Et installez les paquets requis avec la commande :
-pip install -r requirments.txt
+`pip install -r requirments.txt`
 
 Vous pouvez maintenant lancer le programme en tapant:
-- Unix: python P2.py
-- Windows: py P2.py
+- Unix: `python P2.py`
+- Windows: `py P2.py`
 Dès que vous aurez terminé, quittez l'environnement en entrant:
 deactivate
