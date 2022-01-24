@@ -31,5 +31,4 @@ Vous pouvez maintenant lancer le programme en tapant:
 - Windows: `py P2.py`
 
 
-Dès que vous aurez terminé, quittez l'environnement en entrant:
-`deactivate`
+Dès que vous aurez terminé, quittez l'environnement en entrant `deactivate`
