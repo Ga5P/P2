@@ -11,7 +11,7 @@ Allez ensuite dans le répertoire du projet que vous avez téléchargé en tapan
 cd /Users/"vous"/Downloads/P2
 
 Pour vérifier que vous êtes au bon endroit dans la console entrez:
-- Unix: pwd
+- Unix: `pwd`
 - Windows: cd
 
 Créez un environnement :
