@@ -29,5 +29,7 @@ Et installez les paquets requis avec la commande :
 Vous pouvez maintenant lancer le programme en tapant:
 - Unix: `python P2.py`
 - Windows: `py P2.py`
+
+
 Dès que vous aurez terminé, quittez l'environnement en entrant:
-deactivate
+`deactivate`
